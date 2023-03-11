@@ -14,14 +14,17 @@ const Header = () => {
 
   const [nav, setNav] = useState(false);
   const [navColor, setNavColor] = useState("transparent");
+  const [navShadow, setNavShadow] = useState("");
   // const [navFix, setNavFix] = useState("inherit");
 
   const listenScrollEvent = () => {
     if (window.scrollY > 10) {
-      setNavColor("#3C2A21");
+      setNavColor("#A27B5C");
+      setNavShadow("shadow-md shadow-black");
       // setNavFix("fixed");
     } else {
       setNavColor(navColor);
+      setNavShadow(navShadow);
       // setNavFix(navFix);
     }
   };
@@ -35,7 +38,7 @@ const Header = () => {
 
   return (
     <div
-      className="flex justify-between items-center w-full h-20 px-4 z-30 header "
+      className={`flex justify-between items-center w-full h-20 px-4 z-30 header ${navShadow}`}
       style={{
         backgroundColor: navColor,
         transition: "all .3s",

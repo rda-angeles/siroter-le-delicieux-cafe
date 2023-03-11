@@ -1,9 +1,11 @@
-import React from 'react'
-
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+  const getYear = new Date().getFullYear();
 
-export default Footer
+  return (
+    <div className="bg-c-tertiary h-8 text-white flex items-center justify-center">
+      <p className="text-xs">© {getYear} Siroter-Le-Delicieux-Cafe</p>
+    </div>
+  );
+};
+
+export default Footer;

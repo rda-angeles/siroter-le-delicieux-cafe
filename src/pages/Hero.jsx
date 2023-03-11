@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 import "../stylesheets/hero/hero.scss";
 import Services from "../components/Services/Services";
+import Qualities from "../components/Services/Qualities";
 
 const Hero = () => {
   return (
     <div>
-
       {/* Hero Component/Section */}
       <div
-        className="h-screen flex items-center justify-center text-white text-5xl bg-img hero-section relative section"
+        className="h-[85vh] flex items-center justify-center text-white text-5xl bg-img hero-section relative section z-[-1]" 
         style={{}}
       >
         <div className="overlay"></div>
@@ -34,11 +34,14 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Qualities */}
+      <Qualities/>
+
       {/* About Component/Section */}
       <About />
 
       {/* Services Component/Section */}
-      <Services/>
+      <Services />
     </div>
   );
 };

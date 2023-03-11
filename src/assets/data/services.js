@@ -3,6 +3,10 @@ import CoffeeIcon from "@mui/icons-material/Coffee";
 import BakeryDiningIcon from "@mui/icons-material/BakeryDining";
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
 
+import CupCoffee from "../cup-coffee.png";
+import CoffeeBean from "../coffee-bean.png";
+import CoffeeMachine from "../coffee-machine.png";
+
 export const services = [
   {
     id: 1,
@@ -43,5 +47,26 @@ export const services = [
         <LocalDiningIcon sx={{ fontSize: "1.5rem", color: "#C5A880" }} />
       </>
     ),
+  },
+];
+
+export const servicesQualities = [
+  {
+    id: 1,
+    quality: "Coffee",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, at!",
+    icon: CupCoffee,
+  },
+  {
+    id: 2,
+    quality: "Machine",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, at!",
+    icon: CoffeeMachine,
+  },
+  {
+    id: 3,
+    quality: "Coffee Bean",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, at!",
+    icon: CoffeeBean,
   },
 ];
