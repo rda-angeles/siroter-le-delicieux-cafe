@@ -3,18 +3,27 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import About from "../components/About/About";
 
 import { motion } from "framer-motion";
+import { galleryImages } from "../assets/data/gallery.js";
 
-import "../stylesheets/hero/hero.scss";
 import Services from "../components/Services/Services";
 import Qualities from "../components/Services/Qualities";
 import BestSellers from "../components/BestSellers/BestSellers";
+import Gallery from "../components/Gallery/Gallery";
+import Promo from "../components/Promo/Promo";
 
 const Hero = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.5, ease: "easeInOut" },
+      }}
+    >
       {/* Hero Component/Section */}
       <div
-        className="h-[85vh] flex items-center justify-center text-white text-5xl bg-img hero-section relative section z-[-1]" 
+        className="h-[85vh] flex items-center justify-center text-white text-5xl bg-img hero-section relative section z-[-1]"
         style={{}}
       >
         <div className="overlay"></div>
@@ -36,7 +45,7 @@ const Hero = () => {
       </div>
 
       {/* Qualities */}
-      <Qualities/>
+      <Qualities />
 
       {/* About Component/Section */}
       <About />
@@ -44,9 +53,15 @@ const Hero = () => {
       {/* Services Component/Section */}
       <Services />
 
+      {/* Promo Component/Section */}
+      <Promo />
+
       {/* Best Sellers */}
-      <BestSellers/>
-    </div>
+      <BestSellers />
+
+      {/* Best Sellers */}
+      <Gallery images={galleryImages} />
+    </motion.div>
   );
 };
 

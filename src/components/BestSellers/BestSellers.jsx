@@ -20,7 +20,7 @@ const BestSellers = () => {
   }, []);
 
   return (
-    <div className=" text-white section">
+    <div className="text-white section best-seller-section bg-img">
       <div className="section-title mb-10 text-center">
         <h5>what we offer?</h5>
         <h2 className="before:left-[50%] before:translate-x-[-50%]">
