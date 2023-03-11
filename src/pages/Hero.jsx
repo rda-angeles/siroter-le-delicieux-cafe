@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import "../stylesheets/hero/hero.scss";
 import Services from "../components/Services/Services";
 import Qualities from "../components/Services/Qualities";
+import BestSellers from "../components/BestSellers/BestSellers";
 
 const Hero = () => {
   return (
@@ -42,6 +43,9 @@ const Hero = () => {
 
       {/* Services Component/Section */}
       <Services />
+
+      {/* Best Sellers */}
+      <BestSellers/>
     </div>
   );
 };
