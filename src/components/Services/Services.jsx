@@ -1,7 +1,9 @@
 import React from "react";
 import ServicesCard from "../UI/ServicesCard";
 import ServicesImg from "../../assets/services.jpg";
+
 import { services } from "../../assets/data/services";
+
 const Services = () => {
   return (
     <div className=" section  text-white bg-c-primary">

@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import coffeeApi from "../../common/coffeeApi";
+import api from "../../common/api.js";
 
 export const getHotCoffees = createAsyncThunk(
   "coffees/getHotCoffees",
   async () => {
-    const response = await coffeeApi.get("/hot");
+    const response = await api.get("/coffee/hot");
 
     return response.data;
   }
@@ -13,15 +13,14 @@ export const getHotCoffees = createAsyncThunk(
 export const getIcedCoffees = createAsyncThunk(
   "coffees/getIcedCoffees",
   async () => {
-    const response = await coffeeApi.get("/iced");
+    const response = await api.get("/coffee/iced");
 
     return response.data;
   }
 );
-
 const initialState = {
-  hotCoffeeLists: {},
-  icedCoffeeLists: {},
+  hotCoffeeLists: [],
+  icedCoffeeLists: [],
 };
 
 const coffeeSlices = createSlice({

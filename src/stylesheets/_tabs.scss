@@ -1,0 +1,19 @@
+@import './variables';
+
+.tab-btn-wrapper {
+  max-width: 60rem;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.tab-button {
+  padding: 0.5rem 3rem;
+  border: 1px solid $c-secondary;
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+  max-width: 21rem;
+}
+
+.tab-active {
+  background-color: $c-secondary;
+}

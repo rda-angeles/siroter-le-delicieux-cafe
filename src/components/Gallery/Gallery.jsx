@@ -1,5 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
+
 const Gallery = ({ images }) => {
   return (
     <div className="gallery__section text-white bg-c-primary section">

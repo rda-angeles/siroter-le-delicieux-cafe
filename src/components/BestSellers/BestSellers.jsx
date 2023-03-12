@@ -1,5 +1,6 @@
 import React from "react";
 import BestSellersCard from "../UI/BestSellersCard";
+
 import { useSelector, useDispatch } from "react-redux";
 import {
   getHotCoffees,
@@ -54,7 +55,10 @@ const BestSellers = () => {
             {Object.entries(icedCoffees)
               .slice(3, 6)
               .map((icedCoffees) => (
-                <BestSellersCard bestSeller={icedCoffees} key={icedCoffees[1].id} />
+                <BestSellersCard
+                  bestSeller={icedCoffees}
+                  key={icedCoffees[1].id}
+                />
               ))}
           </div>
         </div>
