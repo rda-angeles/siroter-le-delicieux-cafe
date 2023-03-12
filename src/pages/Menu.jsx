@@ -96,7 +96,7 @@ const Menu = () => {
     dispatch(getFoods());
 
     setDisplayFood(breakfasts);
-  }, []);
+  }, [breakfasts]);
 
   return (
     <motion.div
