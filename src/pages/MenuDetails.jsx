@@ -6,7 +6,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { getFoodDetail, getFoods } from "../features/slices/foodSlices";
-
+import { motion } from "framer-motion";
 const MenuDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -33,7 +33,15 @@ const MenuDetails = () => {
   }, []);
 
   return (
-    <div className="lg:h-screen flex items-center text-white pb-[7rem] pt-[9rem] px-5">
+    <motion.div
+      className="lg:h-screen flex items-center text-white pb-[7rem] pt-[9rem] px-5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.6, ease: "easeInOut" },
+      }}
+    >
       <div className="container mx-auto grid place-items-center lg:grid-cols-2 gap-x-6">
         {/* Food Image */}
         <div
@@ -124,7 +132,7 @@ const MenuDetails = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
