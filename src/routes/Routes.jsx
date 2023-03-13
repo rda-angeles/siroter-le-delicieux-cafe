@@ -6,6 +6,7 @@ import Working404 from "../pages/Working404";
 import Menu from "../pages/Menu";
 import MenuDetails from "../pages/MenuDetails";
 import WhoAreWe from "../pages/WhoAreWe";
+import Contact from "../pages/Contact";
 
 const Routes = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const Routes = () => {
           <Route path="/about" element={<WhoAreWe />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/:id" element={<MenuDetails />} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="*" element={<Working404 />} />
         </RouterWrapper>
       </AnimatePresence>

@@ -7,9 +7,10 @@ import { ButtonOutline } from "../UI/Buttons";
 
 const Header = () => {
   const navLinks = [
-    { id: 1, navLink: "Home", path: "/" },
-    { id: 2, navLink: "About", path: "/about" },
-    { id: 3, navLink: "Menu", path: "/menu" },
+    { id: 1, navLink: "Home", path: "/", style: "" },
+    { id: 2, navLink: "About", path: "/about", style: "" },
+    { id: 3, navLink: "Menu", path: "/menu", style: "" },
+    { id: 4, navLink: "Contact", path: "/contact", style: "md:hidden" },
   ];
 
   const [nav, setNav] = useState(false);
@@ -71,10 +72,11 @@ const Header = () => {
         </ul>
 
         {/* Contact Button */}
-
-        <div className="hidden md:block">
-          <ButtonOutline btnText={"Contact Us"} />
-        </div>
+        <Link to={"/contact"}>
+          <div className="hidden md:block">
+            <ButtonOutline btnText={"Contact Us"} />
+          </div>
+        </Link>
       </div>
 
       {/* Mobile menu -- Smaller Device */}
@@ -97,10 +99,10 @@ const Header = () => {
       {/* Mobile menu link */}
       {nav && (
         <ul className="w-full h-screen absolute top-0 left-0 bg-c-primary flex justify-center items-center flex-col menu-link z-10 text-white">
-          {navLinks.map(({ id, navLink, path }) => (
+          {navLinks.map(({ id, navLink, path, style }) => (
             <Link
               key={id}
-              className="py-6 capitalize cursor-pointer text-3xl"
+              className={`py-6 capitalize cursor-pointer text-3xl ${style}`}
               to={path}
               onClick={() => setNav(!nav)}
             >
