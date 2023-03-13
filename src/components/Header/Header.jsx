@@ -8,8 +8,8 @@ import { ButtonOutline } from "../UI/Buttons";
 const Header = () => {
   const navLinks = [
     { id: 1, navLink: "Home", path: "/" },
-    { id: 2, navLink: "Menu", path: "/menu" },
-    { id: 3, navLink: "Shop", path: "/shop" },
+    { id: 2, navLink: "About", path: "/about" },
+    { id: 3, navLink: "Menu", path: "/menu" },
   ];
 
   const [nav, setNav] = useState(false);

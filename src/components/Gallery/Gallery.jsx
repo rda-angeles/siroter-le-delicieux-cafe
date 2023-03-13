@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Gallery = ({ images }) => {
   return (
-    <div className="gallery__section text-white bg-c-primary section">
+    <div className="gallery__section text-white bg-c-secondary w-full py-[5rem]">
       <div className="section-title mb-10 text-center">
         <h5>Our Story?</h5>
         <h2 className="before:left-[50%] before:translate-x-[-50%]">Gallery</h2>

@@ -3,12 +3,10 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import About from "../components/About/About";
 
 import { motion } from "framer-motion";
-import { galleryImages } from "../assets/data/gallery.js";
 
 import Services from "../components/Services/Services";
 import Qualities from "../components/Services/Qualities";
 import BestSellers from "../components/BestSellers/BestSellers";
-import Gallery from "../components/Gallery/Gallery";
 import Promo from "../components/Promo/Promo";
 
 const Hero = () => {
@@ -53,14 +51,11 @@ const Hero = () => {
       {/* Services Component/Section */}
       <Services />
 
-      {/* Promo Component/Section */}
-      <Promo />
-
       {/* Best Sellers */}
       <BestSellers />
 
-      {/* Best Sellers */}
-      <Gallery images={galleryImages} />
+      {/* Promo Component/Section */}
+      <Promo />
     </motion.div>
   );
 };
