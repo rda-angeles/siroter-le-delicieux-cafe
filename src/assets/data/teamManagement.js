@@ -12,6 +12,7 @@ export const ourTeam = [
     role: "Developer/Barista",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt quis exercitationem delectus alias aliquid velit debitis modi obcaecati omnis!",
     img: LordImg,
+    style:"",
     socials: [
       {
         id: 1,
@@ -48,6 +49,7 @@ export const ourTeam = [
     role: "Developer/Barista",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt quis exercitationem delectus alias aliquid velit debitis modi obcaecati omnis!",
     img: NikkoImg,
+    style:"bottom",
     socials: [
       {
         id: 1,
@@ -84,6 +86,7 @@ export const ourTeam = [
     role: "Developer/Barista",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt quis exercitationem delectus alias aliquid velit debitis modi obcaecati omnis!",
     img: RobertImg,
+    style:"",
     socials: [
       {
         id: 1,
@@ -120,6 +123,7 @@ export const ourTeam = [
     role: "Developer/Barista",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt quis exercitationem delectus alias aliquid velit debitis modi obcaecati omnis!",
     img: ReaImg,
+    style:"",
     socials: [
       {
         id: 1,

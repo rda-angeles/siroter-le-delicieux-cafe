@@ -12,6 +12,7 @@ const TeamManagementCard = () => {
             className="member-bg-img bg-img max-w-xs  rounded-full p-[9rem] shadow-md shadow-black"
             style={{
               backgroundImage: `url(${member.img})`,
+              backgroundPosition: member.style
             }}
           ></div>
 
