@@ -25,7 +25,7 @@ const WhoAreWe = () => {
             <img src={SLDLogo} alt="" />
           </div>
 
-          <div className="px-5 lg:px-0">
+          <div className="text-center lg:text-left px-5 lg:px-0">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Doloremque, iusto, sapiente necessitatibus adipisci officia eius
