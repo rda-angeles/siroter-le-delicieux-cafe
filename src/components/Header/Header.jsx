@@ -57,10 +57,10 @@ const Header = () => {
 
         {/* Links */}
         <ul className="nav-links hidden md:flex">
-          {navLinks.map(({ id, navLink, path }) => (
+          {navLinks.map(({ id, navLink, path, style }) => (
             <NavLink
               key={id}
-              className="px-4 text-sm cursor-pointer font-f-secondary"
+              className={`px-4 text-sm cursor-pointer font-f-secondary ${style}`}
               style={({ isActive }) =>
                 isActive ? { fontWeight: "bolder" } : undefined
               }
