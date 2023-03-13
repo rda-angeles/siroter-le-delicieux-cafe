@@ -10,8 +10,8 @@ import {
   getSoups,
   getDesserts,
 } from "../features/slices/foodSlices";
-
 import { motion } from "framer-motion";
+import api from "../common/api";
 import MenuCard from "../components/UI/MenuCard";
 // import Tabs from "../components/UI/Tabs";
 
@@ -48,7 +48,6 @@ const Menu = () => {
   ];
 
   const dispatch = useDispatch();
-
   const mainCourses = useSelector(getMainCourse);
   const breakfasts = useSelector(getBreakfasts);
   const snacksAndSandwiches = useSelector(getSnacksAndSandwiches);
@@ -59,6 +58,7 @@ const Menu = () => {
 
   const [displayFood, setDisplayFood] = useState([]);
   const [tabActive, setTabActive] = useState(tabBtns[0].btnName);
+  const [istabClicked, setIstabClicked] = useState(false);
 
   const activeTab = (tabActive) => {
     setTabActive(tabActive);
@@ -94,9 +94,7 @@ const Menu = () => {
 
   useEffect(() => {
     dispatch(getFoods());
-
-    setDisplayFood(breakfasts);
-  }, [breakfasts]);
+  }, []);
 
   return (
     <motion.div
@@ -117,7 +115,7 @@ const Menu = () => {
 
       {/* Menu Content */}
       <div className="container px-5 lg:px-0 mx-auto flex flex-col items-center justify-around">
-        {Object.keys(displayFood).length === 0 ? (
+        {Object.keys(breakfasts).length === 0 ? (
           <div className="h-screen flex items-center">
             <h1>Menu Loading....</h1>
           </div>
@@ -135,6 +133,7 @@ const Menu = () => {
                   key={button.id}
                   onClick={() => {
                     activeTab(button.btnName);
+                    setIstabClicked(true);
                   }}
                 >
                   <h3> {button.btnName}</h3>
@@ -143,6 +142,7 @@ const Menu = () => {
             </div>
 
             {/* Menu Card */}
+
             <div
               className={`grid gap-5 ${
                 Object.keys(displayFood).length === 1
@@ -150,9 +150,16 @@ const Menu = () => {
                   : "lg:grid-cols-2"
               }`}
             >
-              {displayFood.map((food) => (
+              {/* {displayFood.map((food) => (
                 <MenuCard menu={food} key={food.id} />
-              ))}
+              ))} */}
+              {istabClicked
+                ? displayFood.map((food) => (
+                    <MenuCard menu={food} key={food.id} />
+                  ))
+                : breakfasts.map((displayBfOnLoad) => (
+                    <MenuCard menu={displayBfOnLoad} key={displayBfOnLoad.id} />
+                  ))}
             </div>
           </>
         )}
