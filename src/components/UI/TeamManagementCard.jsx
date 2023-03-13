@@ -7,12 +7,15 @@ const TeamManagementCard = () => {
   return (
     <div className="container mx-auto grid place-items-center gap-10 lg:grid-cols-2 px-5 lg:px-0">
       {ourTeam.map((member) => (
-        <div className="grid place-items-center xl:grid-cols-2 mb-10 max-w-3xl bg-c-primary py-10 rounded-lg">
+        <div
+          className="grid place-items-center xl:grid-cols-2 mb-10 max-w-3xl bg-c-primary py-10 rounded-lg"
+          key={member.id}
+        >
           <div
             className="member-bg-img bg-img max-w-xs  rounded-full p-[9rem] shadow-md shadow-black"
             style={{
               backgroundImage: `url(${member.img})`,
-              backgroundPosition: member.style
+              backgroundPosition: member.style,
             }}
           ></div>
 
@@ -29,7 +32,9 @@ const TeamManagementCard = () => {
             <ul className="grid grid-cols-3 max-w-[6.5rem] place-items-center mx-auto xl:mx-0">
               {member.socials.map((social) => (
                 <motion.li key={social.id} whileHover={{ y: "-10%" }}>
-                  <a href={social.path} target="_blank">{social.icon}</a>
+                  <a href={social.path} target="_blank">
+                    {social.icon}
+                  </a>
                 </motion.li>
               ))}
             </ul>

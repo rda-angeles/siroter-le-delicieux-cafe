@@ -150,9 +150,6 @@ const Menu = () => {
                   : "lg:grid-cols-2"
               }`}
             >
-              {/* {displayFood.map((food) => (
-                <MenuCard menu={food} key={food.id} />
-              ))} */}
               {istabClicked
                 ? displayFood.map((food) => (
                     <MenuCard menu={food} key={food.id} />

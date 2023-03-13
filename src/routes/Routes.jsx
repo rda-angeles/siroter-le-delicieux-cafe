@@ -17,7 +17,7 @@ const Routes = () => {
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<WhoAreWe />} />
           <Route path="/menu" element={<Menu />} />
-          {/* <Route path="/menu/:id" element={<MenuDetails />} /> */}
+          <Route path="/menu/:id" element={<MenuDetails />} />
           <Route path="*" element={<Working404 />} />
         </RouterWrapper>
       </AnimatePresence>

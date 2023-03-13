@@ -15,7 +15,7 @@ const initialState = {
   lunch: [],
   desserts: [],
   soups: [],
-  foodDetail: [],
+  foods: [],
 };
 
 const foodSlices = createSlice({
@@ -44,6 +44,7 @@ const foodSlices = createSlice({
 
       return {
         ...state,
+        foods: payload,
         mainCourses: filterMainCourse,
         breakfasts: filterBreakfast,
         snacksAndSandwiches: filterSnackAndSandwich,
@@ -63,5 +64,8 @@ export const getLunch = (state) => state.food.lunch;
 export const getDesserts = (state) => state.food.desserts;
 export const getSoups = (state) => state.food.soups;
 export const getBreakfasts = (state) => state.food.breakfasts;
+export const allFood = (state) => state.food.foods;
+export const getFoodDetail = (state, foodId) =>
+  state.food.foods.find((food) => food.id === foodId);
 
 export default foodSlices.reducer;
